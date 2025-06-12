@@ -1,0 +1,28 @@
+**/.vscode
+**/.idea
+**/venv
+**/.venv
+**/.env
+**/__pycache__
+modules-requirements.txt
+modules-tests.sh
+**/.coverage
+**/coverage.xml
+**/coverage
+**/*.log
+**/*.log.*
+**/*.mo
+openIMIS/file_storage
+openIMIS/locale/en/LC_MESSAGES/django.mo
+**/staticfiles
+extracted_translations_fe
+script/config.py
+**/src/*
+**/images/insurees
+openimis-dev.json
+
+# Except for the runConfigurations folder
+!.idea/runConfigurations
+
+# Ensure all files in runConfigurations are included
+!.idea/runConfigurations/*
