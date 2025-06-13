@@ -47,14 +47,6 @@ class BenefitPlanConfig(AppConfig):
     gql_check_benefit_plan_update = None
     benefit_plan_suspend = None
 
-    enable_python_workflows = None
-    beneficiary_mask_fields = None
-    group_beneficiary_mask_fields = None
-    beneficiary_base_fields = None
-    social_protection_masking_enabled = None
-
-    default_beneficiary_status = None
-
     def ready(self):
         from core.models import ModuleConfiguration
 

@@ -50,7 +50,7 @@ def validate_benefit_plan(data, uuid=None):
 def validate_bf_unique_code(code, uuid=None):
     instance = BenefitPlan.objects.filter(code=code, is_deleted=False).exclude(id=uuid).first()
     if instance:
-        return [{"message": _("social_protection.validation.benefit_plan.code_exists" % {
+        return [{"message": _("benefit_plan.validation.benefit_plan.code_exists" % {
             'code': code
         })}]
     return []
@@ -59,7 +59,7 @@ def validate_bf_unique_code(code, uuid=None):
 def validate_bf_unique_name(name, uuid=None):
     instance = BenefitPlan.objects.filter(name=name, is_deleted=False).exclude(id=uuid).first()
     if instance:
-        return [{"message": _("social_protection.validation.benefit_plan.name_exists" % {
+        return [{"message": _("benefit_plan.validation.benefit_plan.name_exists" % {
             'name': name
         })}]
     return []
@@ -67,7 +67,7 @@ def validate_bf_unique_name(name, uuid=None):
 
 def validate_not_empty_field(string, field):
     if not string:
-        return [{"message": _("social_protection.validation.field_empty") % {
+        return [{"message": _("benefit_plan.validation.field_empty") % {
             'field': field
         }}]
     return []
@@ -78,7 +78,7 @@ def validate_project_unique_name(name, benefit_plan_id, uuid=None):
         name=name, benefit_plan__id=benefit_plan_id, is_deleted=False
     ).exclude(id=uuid).first()
     if instance:
-        return [{"message": _("social_protection.validation.project.name_exists" % {
+        return [{"message": _("benefit_plan.validation.project.name_exists" % {
             'name': name
         })}]
     return []
