@@ -52,7 +52,6 @@ class BenefitPlanConfig(AppConfig):
 
         cfg = ModuleConfiguration.get_or_default(self.name, DEFAULT_CONFIG)
         self.__load_config(cfg)
-        self.__register_masking_class()
 
 
     @classmethod
