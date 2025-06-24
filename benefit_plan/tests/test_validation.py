@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.utils.translation import override
-from benefit_plan.validation import validate_project_unique_name
+from benefit_plan.validations import validate_project_unique_name
 from core.test_helpers import create_test_interactive_user
 from benefit_plan.tests.test_helpers import (
     create_benefit_plan,

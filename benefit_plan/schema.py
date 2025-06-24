@@ -57,6 +57,7 @@ class BfTypeEnum(graphene.Enum):
     INDIVIDUAL = BenefitPlan.BenefitPlanType.INDIVIDUAL_TYPE
     GROUP = BenefitPlan.BenefitPlanType.GROUP_TYPE
 
+print('loadedxxxxx')
 
 class Query(graphene.ObjectType):
     benefit_plan = OrderedDjangoFilterConnectionField(

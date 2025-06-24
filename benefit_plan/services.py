@@ -8,7 +8,7 @@ from benefit_plan.models import (
     Project
 )
 
-from benefit_plan.validation import (
+from benefit_plan.validations import (
     BenefitPlanValidation,
     ProjectValidation,
 )
